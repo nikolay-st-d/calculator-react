@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
 
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0.5rem;
+  padding: 0;
   text-align: center;
 }
 @media (min-width: 600px) {
@@ -15,6 +17,7 @@
 header {
   height: 5vh;
   display: flex;
+  gap: 2em;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -62,8 +65,8 @@ footer {
   color: rgb(31, 31, 31);
   padding: 0.2em;
   background-color: rgb(177, 182, 196);
-  border: 2px solid black;
-  border-radius: 0.2em;
+  border: 1px solid rgb(29, 29, 29);
+  border-radius: 0.15em;
 }
 
 .branding {

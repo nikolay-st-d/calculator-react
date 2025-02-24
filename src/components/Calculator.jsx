@@ -4,30 +4,67 @@ import Button from './Button';
 
 const buttonValues = [
     'C',
+    '%',
+    '**',
+    '*',
     '1',
     '2',
-    '*',
     '3',
+    '/',
     '4',
     '5',
-    '/',
     '6',
+    '+',
     '7',
     '8',
-    '+',
     '9',
-    '0',
-    '00',
     '-',
+    '00',
+    '0',
     '.',
     '=',
 ];
 
-const displayChersLenght = 12;
+const displayCharsLenght = 12;
 
 const Calculator = () => {
     const [displayNumbers, setDisplayNumbers] = useState('0');
     const [expression, setExpression] = useState('');
+
+    function calculateExpression(exp) {
+        const operators = ['+', '-', '*', '/', '%', '**'];
+        let result = 0;
+
+        operators.forEach((operator) => {
+            if (exp.includes(operator)) {
+                let [left, right] = exp.split(operator);
+                switch (operator) {
+                    case '*':
+                        result = Number(left) * Number(right);
+                        break;
+                    case '/':
+                        result = Number(left) / Number(right);
+                        break;
+                    case '+':
+                        result = Number(left) + Number(right);
+                        break;
+                    case '-':
+                        result = Number(left) - Number(right);
+                        break;
+                    case '%':
+                        result = (Number(left) * Number(right)) / 100;
+                        break;
+                    case '**':
+                        result = Number(left) ** Number(right);
+                        break;
+                }
+            }
+        });
+        if (!isNaN(result)) {
+            return result;
+        }
+        return 'Error';
+    }
 
     const buttonClickHandler = (value) => {
         if (value === 'C') {
@@ -35,18 +72,20 @@ const Calculator = () => {
             setExpression('');
         } else if (value === '=') {
             try {
-                const result = eval(expression);
+                const result = calculateExpression(expression);
                 setDisplayNumbers(
-                    result.toString().substring(0, displayChersLenght)
+                    result.toString().substring(0, displayCharsLenght)
                 );
-                setExpression(result.toString().substring(0, displayChersLenght));
+                setExpression(
+                    result.toString().substring(0, displayCharsLenght)
+                );
             } catch (error) {
                 setDisplayNumbers('Error');
                 setExpression('');
             }
         } else {
             const newExpression = expression + value;
-            if (newExpression.length > displayChersLenght + 2) {
+            if (newExpression.length > displayCharsLenght + 2) {
                 setExpression(expression);
                 setDisplayNumbers(expression);
             } else {
