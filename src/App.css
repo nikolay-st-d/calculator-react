@@ -3,8 +3,39 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0.5rem;
   text-align: center;
+}
+@media (min-width: 600px) {
+  #root {
+    padding: 1rem;
+  }
+}
+
+header {
+  height: 5vh;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(34, 49, 49);
+}
+main {
+  min-height: 90vh;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+footer {
+  height: 5vh;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: darkgrey;
+  background-color: #1a1a1a;
+  font-size: 0.8em;
 }
 
 .frame {
@@ -12,7 +43,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 25em;
+  width: 24em;
+  max-width: 100%;
   background-color: rgb(34, 49, 49);
   border: 2px solid rgb(0, 0, 0);
   border-radius: 1em;
