@@ -59,14 +59,16 @@ footer {
   display: block;
   width: 95%;
   font-family: 'Big Shoulders Display', sans-serif;
+  line-height: 1;
   font-size: 4em;
   font-weight: 500;
   text-align: right;
   color: rgb(31, 31, 31);
   padding: 0.2em;
   background-color: rgb(177, 182, 196);
-  border: 1px solid rgb(29, 29, 29);
+  border: 2px solid rgb(29, 29, 29);
   border-radius: 0.15em;
+  box-shadow: 0.02em 0.04em 0.1em rgba(0, 0, 0, 0.7) inset;
 }
 
 .branding {
