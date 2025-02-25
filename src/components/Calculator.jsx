@@ -85,7 +85,7 @@ const Calculator = () => {
             }
         } else {
             const newExpression = expression + value;
-            if (newExpression.length > displayCharsLenght + 2) {
+            if (newExpression.length > displayCharsLenght + 3) {
                 setExpression(expression);
                 setDisplayNumbers(expression);
             } else {
