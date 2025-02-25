@@ -1,6 +1,5 @@
-# calculator-react
-Simple calculator with React
+# Simple calculator with React
 
-LINK: https://calculator-react-ten-puce.vercel.app/
+LINK to the app: https://calculator-react-ten-puce.vercel.app/
 
-![image](https://github.com/user-attachments/assets/d680b039-2693-4f73-8044-e34ef33c20a1)
+![image](https://github.com/user-attachments/assets/8deae334-f72f-4cf0-9596-4e392a8bdaba)
